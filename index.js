@@ -111,18 +111,18 @@ function createPagination (req) {
     if (1 < params_page) {
 
     	if (params_first_last) {
-    		returnHTML += '<li><a href="' + pods_var_update(1) + ' class="pods-pagination-number pods-pagination-first ' + params_link_class + '">' + params_first_text + '</a></li>';
+    		returnHTML += '<li><a href="' + pods_var_update(1) + '" class="pods-pagination-number pods-pagination-first ' + params_link_class + '">' + params_first_text + '</a></li>';
     	}
     	if (params_prev_next) {
-    		returnHTML += '<li><a href="' + pods_var_update(params_page - 1) + ' class="pods-pagination-number pods-pagination-prev ' + params_link_class + '>' + params_prev_text + ' </a> </li>';
+    		returnHTML += '<li><a href="' + pods_var_update(params_page - 1) + '" class="pods-pagination-number pods-pagination-prev ' + params_link_class + '">' + params_prev_text + ' </a> </li>';
     	}
-    	returnHTML += '<li><a href="' + pods_var_update(1) + ' class="pods-pagination-number pods-pagination-first ' + params_link_class + '">1</a> </li>';
+    	returnHTML += '<li><a href="' + pods_var_update(1) + '" class="pods-pagination-number pods-pagination-first ' + params_link_class + '">1</a> </li>';
     }
     if (1 < (params_page - 100)) {
-    	returnHTML += '<li><a href="' + pods_var_update(params_page - 100) + ' class="pods-pagination-number pods-pagination-' + (params_page - 100) + ' ' + params_link_class + '">' + (params_page - 100) + ' </a> </li>';
+    	returnHTML += '<li><a href="' + pods_var_update(params_page - 100) + '" class="pods-pagination-number pods-pagination-' + (params_page - 100) + ' ' + params_link_class + '">' + (params_page - 100) + ' </a> </li>';
     }
     if (1 < (params_page - 10)) {
-    	returnHTML += '<li><a href="' + pods_var_update(params_page - 10) + ' class="pods-pagination-number pods-pagination-' + (params_page - 10) + ' ' + params_link_class + '">' + (params_page - 10) + ' </a> </li>';
+    	returnHTML += '<li><a href="' + pods_var_update(params_page - 10) + '" class="pods-pagination-number pods-pagination-' + (params_page - 10) + ' ' + params_link_class + '">' + (params_page - 10) + ' </a> </li>';
     }
     var params_mid_size_pre;
     var params_mid_size_post;
@@ -136,9 +136,9 @@ function createPagination (req) {
     	params_mid_size_pre = (params_total - params_page)-10;
     	
     } */
-	    for (i = params_mid_size; i > 0; i--) {
+	    for (i = params_mid_size-1; i > 0; i--) {
 	    	if (1 < (params_page - i)) {
-	    		returnHTML += '<li><a href="' + pods_var_update(params_page - i) + ' class="pods-pagination-number pods-pagination-' + (params_page - i) + ' ' + params_link_class + '">' + (params_page - i) + '</a></li>';
+	    		returnHTML += '<li><a href="' + pods_var_update(params_page - i) + '" class="pods-pagination-number pods-pagination-' + (params_page - i) + ' ' + params_link_class + '">' + (params_page - i) + '</a></li>';
 	    	}
 	    }
    
